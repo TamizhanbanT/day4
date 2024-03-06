@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ex">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" coxtext="width=device-width, initial-scale=1.0">
+    <title>prime number</title>
+</head>
+<body>
+    <script>
+    let prime = [1,2,3,4,5,7,89,13,23,24,15];
+let result = [];
+/* Anonymous function */
+
+/* function primenumb(n) {
+    for (let x = 2; x < n; x++) {
+        if (n % x === 0) {
+            return false;
+        }
+    } */
+//Arrow function
+let  primenumb = (n) => {
+    for (let x = 2; x < n; x++) {
+        if (n % x === 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+for (let num of prime) {
+    if (primenumb(num)) {
+        result.push(num);
+    }
+}
+
+document.write(result);
+    </script>
+    
+</body>
+</html>
